@@ -1,0 +1,40 @@
+/**
+******************
+* Main styling variables *
+* All variable used in the website *
+* Such as colours, fonts, font styles etc. *
+******************
+**/
+
+// FONT STYLES
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600|Martel+Sans:700);
+//Martel Sans - Logo Font - Open Sans - Content Font//
+
+/* ----------------
+   COLOUR PALETTE
+-------------------*/
+
+$white 			:	#ffffff;
+$lightGray 		:	#e6e6e6;
+$steelBlue		:	#4b77be;
+
+/* ---------------
+  FONT VARIABLES
+------------------*/
+
+$logoFont	:	'Martel Sans', Arial, Helvetica, sans-serif;
+$mainFont	:	'Open Sans', Arial, Helvetica, sans-serif;
+
+$normal 	: 400;	
+$bold 		: 600;
+$heavy 		: 700;
+
+/* ---------------
+   BREAKPOINTS
+------------------*/
+
+$wide		:	1200px; //Desktop
+$large		:	992px; //Laptop/iMac/Macbook
+$mediumMax	:	991px; //Ipads Max Screens to Laptop Screens
+$medium		:	768px; //Ipads
+$small		:	480px; //Mobile

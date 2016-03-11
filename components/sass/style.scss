@@ -1,0 +1,26 @@
+// /**
+// ******************
+// * STYLES.CSS
+// * This document include all the styling for the site
+// ******************
+// **/
+
+//COMPASS Imports
+@import "compass";
+@import "compass/reset";
+@import "compass/layout";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import 'compass/css3/filter';
+@import "compass/css3/flexbox";
+@import "compass/css3/transition";
+
+//CORE PARTIALS
+@import "variables";
+@import "mixins";
+@import "base";
+
+//IMPORT MODULES
+@import "modules/intro";
+@import "modules/navigation";
+@import "modules/footer";
