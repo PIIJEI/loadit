@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<title>Piotr Osiak - JavaScript Project</title>
+	<meta name="keywords" content="piijei, designs, front-end, web development, manchester metropolitan university, mmu, self-initiated, project, piotr, osiak, final year, html5, css3, javascript, responsive">
+	<meta name="description" content="Practical self-initaited project based on JavaScript and its use. The project was made with a training purpose on improving the scripting language.">
+	<meta name="author" content="Piotr Osiak">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-	<title>JavaScript Project</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CMartel+Sans:700' rel='stylesheet' type='text/css'>
 </head>
@@ -19,14 +21,10 @@
 	</nav>
 </header>
 <main role="main">
-	<img class="logotype" src="images/logo.svg" alt="logo">
-
+	<img class="logotype" src="images/logo.svg" alt="loadit logo" title="LOADIT is a JavaScript project with the purpose on testing the scripting language knowledge">
 	<div class="container">
 		<div id="introContent">
-			<p class="introPar">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. </p>
+			<p class="introPar">LOADIT is a prototype self-initiated project to test the author’s knowledge of JavaScript. The project is not meant to be a fully functional however, it will be further developed. Additional features for the project will be soon developed and included. Current available task created with JavaScript includes the quiz containing 10 questions about the author. </p>
 			<div class="btnsMenu">
 				<span class="menuTitle">Menu</span>
 				<ul>
@@ -41,12 +39,7 @@
 				<div class="popContent">
 					<h1>README</h1>
 					<h2>Purpose of this project</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>The purpose of this project was to learn the basics of JavaScript to improve the knowledge within the programming skills. The main idea of the project was to create a simple questionnaire form with questions about the author. During the development process, no additional libraries such as JQuery were used but pure JavaScript coding.</p>
 					<button id="closeReadme">Close</button>
 				</div>
 				</div>
@@ -73,6 +66,7 @@
 <script>
 	document.addEventListener("DOMContentLoaded", function(){
 		//PopUp Box for README
+		//This is a script to view a box for README when clicking the button and disappears when pressed Close button
 		var popUp = document.getElementById('popBox'),
 			 openReadme = document.getElementById('readmeBtn'),
 			 closeReadme = document.getElementById('closeReadme');

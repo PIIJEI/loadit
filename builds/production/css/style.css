@@ -105,7 +105,7 @@ body .popup-active {
 }
 
 .logotype {
-  width: 300px;
+  width: 275px;
   margin: 0 auto;
   display: block;
 }
@@ -114,6 +114,9 @@ body .popup-active {
   margin: 0 auto;
   display: table;
   height: 100%;
+}
+.container .active {
+  display: block;
 }
 .container .introPar {
   display: table-cell;
@@ -145,7 +148,7 @@ body .popup-active {
   max-width: 320px;
   margin: 0 auto;
 }
-.container .btnsMenu ul li a {
+.container .btnsMenu ul li span {
   text-align: center;
   display: block;
   text-decoration: none;
@@ -162,9 +165,10 @@ body .popup-active {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.container .btnsMenu ul li a:hover {
+.container .btnsMenu ul li span:hover {
   background: #ffffff;
   color: #4b77be;
+  cursor: pointer;
 }
 .container .popupBox {
   display: none;
@@ -211,7 +215,13 @@ body .popup-active {
   background: #ffffff;
   border-radius: 5px;
   border: 3px solid #d9d9d9;
-  padding: 10px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+@media (max-width: 480px) {
+  .container .popupBox .popContent {
+    max-width: 450px;
+  }
 }
 .container .popupBox .popContent h1, .container .popupBox .popContent h2 {
   text-align: center;
@@ -230,6 +240,7 @@ body .popup-active {
   letter-spacing: 0.05em;
   font-size: 1em;
   line-height: 1.2em;
+  padding: 10px;
 }
 .container .popupBox .popContent button {
   background: none;
@@ -254,13 +265,37 @@ body .popup-active {
   background: #363636;
   color: #ffffff;
 }
+.container .questionNo {
+  font-size: 2.25em;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+}
 .container .QnA {
   margin: 0;
   padding: 10px;
 }
+.container .QnA h2 {
+  font-size: 1.85em;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5%;
+  line-height: 1.2em;
+}
+.container .QnA h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  max-width: 264px;
+  display: block;
+  margin: 0 auto;
+}
 .container .QnA label {
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
   margin: 0 auto;
   display: block;
   margin-bottom: 3%;
@@ -268,7 +303,8 @@ body .popup-active {
   background-color: none;
   border-radius: 3px;
   border: 3px solid #ffffff;
-  overflow: auto;
+  position: relative;
+  overflow: hidden;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
@@ -320,27 +356,59 @@ body .popup-active {
   color: #4b77be;
   cursor: pointer;
 }
-.container .bToMenu {
-  border-top: 2px dotted #ffffff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-top: 25px;
-  text-align: center;
-}
-.container .bToMenu button {
-  border: none;
-  background: none;
-  font-size: 1.2em;
+.container .QnA .continueBtn {
   font-weight: 600;
+  margin-top: 3%;
+  border: none;
+  border: 3px solid #ffffff;
+  background: none;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
   color: #ffffff;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
-.container .bToMenu button:hover {
-  color: #F5D76E;
+.container .QnA .continueBtn:hover {
+  color: #4b77be;
+  background: #ffffff;
   cursor: pointer;
+}
+.container .QnA .finishBtn {
+  background: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  padding: 10px;
+  margin-bottom: 3%;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.container .QnA .finishBtn a {
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #ffffff;
+}
+.container .QnA .finishBtn a:hover {
+  background: #ffffff;
+  color: #4b77be;
 }
 
 header {
-  height: 18vh;
+  height: 13vh;
 }
 header .site-nav {
   margin: 0;
@@ -406,12 +474,4 @@ footer .credits p {
   margin: 0;
   font-size: .8em;
   line-height: .8em;
-}
-footer .credits p a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-}
-footer .credits p a:hover {
-  border-bottom: 2px solid #ffffff;
 }

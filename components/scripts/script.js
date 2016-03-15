@@ -19,7 +19,7 @@ function _(x){
 function renderQuestion(){
   quizQs = _("quizQs");
   if(pos >= questions.length){
-    quizQs.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    quizQs.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct<br>Well Done!</h2><button class='finishBtn'><a href='index.html'>Finish</a></button>";
     _("qNo").innerHTML = "Test Completed";
     pos = 0;
     correct = 0;
@@ -37,7 +37,7 @@ function renderQuestion(){
   quizQs.innerHTML += "<label><input type='radio' name='choices' value='B'><span>"+chB+"</span></label>";
   quizQs.innerHTML += "<label><input type='radio' name='choices' value='C'><span>"+chC+"</span></label>";
   quizQs.innerHTML += "<label><input type='radio' name='choices' value='D'><span>"+chD+"</span></label>";
-  quizQs.innerHTML += "<button onClick='checkAnswer()'>Next</button>";
+  quizQs.innerHTML += "<button class='continueBtn' onClick='checkAnswer()'>Next</button>";
 }
 
 function checkAnswer(){
@@ -57,19 +57,12 @@ function checkAnswer(){
 window.addEventListener("load", renderQuestion, false);
 
 //Script for switching containers
-var buttonOne = document.getElementById('quizBtn').addEventListener("click", contentBtnOne, false),
-    buttonTwo = document.getElementById('menuBtn').addEventListener("click", contentBtnTwo, false);
+var buttonOne = document.getElementById('quizBtn').addEventListener("click", contentBtnOne, false);
+var quizContent = document.getElementById('quizContent');
 
 function contentBtnOne(){
   var introContent = document.getElementById('introContent');
     introContent.className = (introContent.className === "active") ? "" : "active";
     introContent.style.display = "none";
     quizContent.style.display = "block";
-}
-
-function contentBtnTwo(){
-  var quizContent = document.getElementById('quizContent');
-    quizContent.className = (quizContent.className === "active") ? "" : "active";
-    quizContent.style.display = "none";
-    introContent.style.display = "block";
 }

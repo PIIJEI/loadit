@@ -5,7 +5,7 @@ body {
 }//body
 
 .logotype {
-	width: 300px;
+	width: 275px;
 	margin: 0 auto;
 	display: block;
 }//logotype
@@ -113,7 +113,11 @@ body {
     		background: $white;
     		border-radius: 5px;
     		border: 3px solid darken($white, 15%);
-    		padding: 10px;
+    		padding-bottom: 15px;
+    		padding-top: 15px;
+    		@include breakpoint(sml) {
+    			max-width: 450px;
+    		}
 
     		h1, h2 {
 				text-align: center;
@@ -135,6 +139,7 @@ body {
 				letter-spacing: 0.05em;
 				font-size: 1em;
 				line-height: 1.2em;
+				padding: 10px;
 			}
 
 			button {
@@ -175,6 +180,7 @@ body {
 			text-align: center;
 			padding: 5px;
 			margin-bottom: 5%;
+			line-height: 1.2em;
 		}
 		h3 {
 			font-size: 1.5em;

@@ -1,100 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Piotr Osiak - JavaScript Project</title><meta name=keywords content="piijei, designs, front-end, web development, manchester metropolitan university, mmu, self-initiated, project, piotr, osiak, final year, html5, css3, javascript, responsive"><meta name=description content="Practical self-initaited project based on JavaScript and its use. The project was made with a training purpose on improving the scripting language."><meta name=author content="Piotr Osiak"><meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel=stylesheet href=css/style.css><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CMartel+Sans:700" rel=stylesheet type=text/css></head><body id=body><header id=header role=banner><nav class=site-nav><span class=brand><a href=index.html>Loadit</a></span><ul class=menu><li><a href=http://www.piijeidesigns.co.uk target=_blank>Author</a></li><li><a href=http://www.github.com/PIIJEI/loadit target=_blank>GitHub</a></li></ul></nav></header><main role=main><img class=logotype src=images/logo.svg alt="loadit logo" title="LOADIT is a JavaScript project with the purpose on testing the scripting language knowledge"><div class=container><div id=introContent><p class=introPar>LOADIT is a prototype self-initiated project to test the author’s knowledge of JavaScript. The project is not meant to be a fully functional however, it will be further developed. Additional features for the project will be soon developed and included. Current available task created with JavaScript includes the quiz containing 10 questions about the author.</p><div class=btnsMenu><span class=menuTitle>Menu</span><ul><li id=readmeBtn><span>Readme</span></li><li id=quizBtn><span>Quiz</span></li></ul></div><div id=popBox class=popupBox><div class=popOverlay></div><div class=popWrapper><div class=popContent><h1>README</h1><h2>Purpose of this project</h2><p>The purpose of this project was to learn the basics of JavaScript to improve the knowledge within the programming skills. The main idea of the project was to create a simple questionnaire form with questions about the author. During the development process, no additional libraries such as JQuery were used but pure JavaScript coding.</p><button id=closeReadme>Close</button></div></div></div></div><div id=quizContent style="display: none"><h2 id=qNo class=questionNo></h2><div id=quizQs class=QnA></div></div></div></main><footer id=footer role=contentinfo><div class=credits><p>LOADIT &copy; 2016</p><p>All rights reserved</p><p>Designed &amp; Developed by <strong>Piotr Osiak</strong></p></div></footer><script src=js/script.js type=text/javascript></script><script>
+	document.addEventListener("DOMContentLoaded", function(){
+		//PopUp Box for README
+		//This is a script to view a box for README when clicking the button and disappears when pressed Close button
+		var popUp = document.getElementById('popBox'),
+			 openReadme = document.getElementById('readmeBtn'),
+			 closeReadme = document.getElementById('closeReadme');
 
-	<title>JavaScript Project</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CMartel+Sans:700' rel='stylesheet' type='text/css'>
-	<script>
-		document.addEventListener("DOMContentLoaded", function(){
-			var popUp = document.getElementById('popBox'),
-			 	openReadme = document.getElementById('readmeBtn'),
-			 	closeReadme = document.getElementById('closeReadme');
-
-			openReadme.addEventListener("click", function(){
-				popUp.style.display = "block";
-			});
-
-			closeReadme.addEventListener("click", function(){
-				popUp.style.display = "none";
-			});	
+		openReadme.addEventListener("click", function(){
+			popUp.style.display = "block";
 		});
-	</script>
-</head>
-<body id="body">
-<header id="header" role="banner">
-	<nav class="site-nav">
-		<span class="brand"><a href="#">Loadit</a></span>
-		<ul class="menu">
-			<li><a href="#">Author</a></li>
-			<li><a href="#">GitHub</a></li>
-		</ul>
-	</nav>
-</header>
-<main id="main" role="main">
-	<img class="logotype" src="images/logo.svg" alt="logo">
 
-	<div id="intro" class="container">
-		<div class="introduction">
-			<p id="introText" class="introPar">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. </p>
-		</div>
-
-		<div class="btnsMenu">
-			<span class="menuTitle">Menu</span>
-			<ul>
-				<li id="readmeBtn"><a href="#popBox">Readme</a></li>
-				<li id="quizBtn"><a href="">Quiz</a></li>
-				<!-- <li id="gameBtn"><a href="">The Game</a></li> -->
-			</ul>
-		</div>	
-		
-		<div id="popBox" class="popupBox">
-			<div class="popOverlay"></div>
-			<div class="popWrapper">
-			<div class="popContent">
-				<h1>README</h1>
-				<h2>Purpose of this project</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<button id="closeReadme">Close</button>
-			</div>
-			</div>
-		</div>
-	</div>
-
-	
-<!-- Quiz -->
-<div id="quiz" class="container"> 
-			<h2 id="qNo"></h2>
-			<div id="quizQs" class="QnA"></div>
-		<div class="bToMenu">
-			<button id="toMenu">Back to menu</button>
-		</div>
-	</div>
-
-
-<div id="test"></div>
-
-
-</main>
-
-<footer id="footer" role="contentinfo">
-	<div class="credits">
-		<p>LOADIT &copy; 2016</p>
-		<p>All rights reserved</p>
-		<p>Designed &amp; Developed by <a href="#">Piotr Osiak</a></p>
-	</div>
-</footer>
-<script src="js/script.js" language="Javascript" type="text/javascript"></script>
-<script src="js/test.js" type="text/javascript"></script>
-</body>
-</html>
+		closeReadme.addEventListener("click", function(){
+			popUp.style.display = "none";
+		});	
+	});
+</script></body></html>

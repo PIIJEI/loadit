@@ -274,6 +274,7 @@ body .popup-active {
   text-align: center;
   padding: 5px;
   margin-bottom: 5%;
+  line-height: 1.2em;
 }
 .container .QnA h3 {
   font-size: 1.5em;
@@ -400,7 +401,7 @@ body .popup-active {
 }
 
 header {
-  height: 18vh;
+  height: 13vh;
 }
 header .site-nav {
   margin: 0;

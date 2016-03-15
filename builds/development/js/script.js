@@ -10,16 +10,17 @@ var questions = [
     [ "Where I live", "Chamber of Secrets", "United Kingdom", "Lonely Island", "At home", "B" ],
     [ "What is my hobby?", "Martial Arts", "Hiking", "Paintball", "Learning spells", "A" ],
     [ "What would be my weapon of choice to survive the zombie apocalypse", "Beer", "Shovel", "Magic Wand", "Samurai Sword", "D" ]
-];
+]; //CREATING ARRAYS TO GENERATE QUESTIONS IN THE POLL
 
 function _(x){
   return document.getElementById(x);
 }
 
-function renderQuestion(){
+//FUNCTION TO GENERATE THE CHOICES USING INPUTS AND AVOID UNWANTED ISSUES SUCH AS CONTINUANCE OF QUESTIONS WHEN THE POLL HAS ENDED
+function renderQuestion(){  
   quizQs = _("quizQs");
   if(pos >= questions.length){
-    quizQs.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct<br>Well done!</h2><button class='finishBtn'><a href='index.html'>Finish</a></button>";
+    quizQs.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct<br>Well Done!</h2><button class='finishBtn'><a href='index.html'>Finish</a></button>";
     _("qNo").innerHTML = "Test Completed";
     pos = 0;
     correct = 0;
@@ -40,7 +41,8 @@ function renderQuestion(){
   quizQs.innerHTML += "<button class='continueBtn' onClick='checkAnswer()'>Next</button>";
 }
 
-function checkAnswer(){
+//FUNCTION TO CHECK THE CORRECT ANSWERS AND GIVE THE FEEDBACK TO THE PARTICIPANT USER TAKING THE QUESTIONNAIRE
+function checkAnswer(){ 
   choices = document.getElementsByName("choices");
   for(var i = 0; i < choices.length; i++){
     if(choices[i].checked){
@@ -57,8 +59,8 @@ function checkAnswer(){
 window.addEventListener("load", renderQuestion, false);
 
 //Script for switching containers
-var buttonOne = document.getElementById('quizBtn').addEventListener("click", contentBtnOne, false),
-    quizContent = document.getElementById("quizContent");
+var buttonOne = document.getElementById('quizBtn').addEventListener("click", contentBtnOne, false);
+var quizContent = document.getElementById('quizContent');
 
 function contentBtnOne(){
   var introContent = document.getElementById('introContent');
