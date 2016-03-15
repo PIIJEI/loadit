@@ -1,0 +1,294 @@
+body {
+	.popup-active {
+		overflow: hidden;
+	}//popup-active
+}//body
+
+.logotype {
+	width: 300px;
+	margin: 0 auto;
+	display: block;
+}//logotype
+
+.container { 
+	margin: 0 auto;
+	display: table;
+	height: 100%;
+
+	.active {
+		display: block;
+	}
+
+	.introPar {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		width: 100%;
+		max-width: 540px;
+		line-height: 1.2em;
+		font-size: 1em;
+		letter-spacing: 0.05em;
+	}//introPar
+
+	.btnsMenu {
+		margin-top: 5%;
+		padding: 0;
+		text-align: center;
+		.menuTitle {
+			text-transform: uppercase;
+			font-size: 1.3em;
+			font-weight: $bold;
+		}
+		ul {
+			padding-top: 10px;
+			padding-bottom: 25px;
+			li {
+			padding: 10px;
+			width: 100%;
+			max-width: 320px;
+			margin: 0 auto;
+				span {
+					text-align: center;
+					display: block;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: $white;
+					font-weight: $heavy;
+					letter-spacing: 0.05em;
+					font-size: 1.1em;
+					border: 3px solid $white;
+					padding: 15px;
+					border-radius: 25px;
+					@include transition(all .3s ease-in-out);
+					&:hover {
+						background: $white;
+						color: $steelBlue;
+						cursor: pointer;
+					}//btnsMenu.li.a:hover
+				}//btnsMenu.li.a
+			}//btnsMenu.li
+		}//btnsMenu.ul
+	}//btnsMenu
+
+	.popupBox { 
+		// responsible for popup box
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+   		overflow-y: auto;
+   		z-index: 1;
+		@include borderbox;
+		@include transition(all .2s ease-in-out);
+
+		.popOverlay {
+			position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-color: rgba($lightGray, 0.7);
+		    z-index: 2;
+		}
+
+		.popWrapper {
+			position: relative;
+		    top: 50%;
+		    max-width: 500px;
+		    max-height: 100%;
+		    margin: auto;
+		    z-index: 3;
+		    transform: translateY(-50%);
+		}
+
+		.popContent {
+			height: 100%;
+			width: 100%;
+			max-width: 540px;
+    		background: $white;
+    		border-radius: 5px;
+    		border: 3px solid darken($white, 15%);
+    		padding: 10px;
+
+    		h1, h2 {
+				text-align: center;
+				color: $dark;
+				padding: 5px;
+			}//h1,h2
+
+			h1 {
+				font-size: 3em;
+			}
+
+			h2 {
+				font-size: 1.4em;
+				margin-bottom: 5%;
+			}
+
+			p {
+				color: $dark;
+				letter-spacing: 0.05em;
+				font-size: 1em;
+				line-height: 1.2em;
+			}
+
+			button {
+				background: none;
+				display: block;
+				margin: auto;
+				color: $dark;
+				font-size: 1.2em;
+				font-weight: $bold;
+				text-transform: uppercase;
+				padding: 10px;
+				text-align: center;
+				border: 2px solid $dark;
+				border-radius: 2px;
+				outline: none;
+				@include transition(all .2s ease-in-out);
+				&:hover {
+					cursor: pointer;
+					background: lighten($dark, 10%);
+					color: $white;
+				}
+			}//quizBox.button
+		}//.popContent
+	}//popupBox
+
+	.questionNo {
+		font-size: 2.25em;
+		color: $white;
+		text-align: center;
+		padding: 5px;
+	}
+	.QnA {
+		margin: 0;
+		padding: 10px;
+		h2 {
+			font-size: 1.85em;
+			color: $white;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 5%;
+		}
+		h3 {
+			font-size: 1.5em;
+			color: $white;
+			text-align: center;
+			padding: 5px;
+			width: 100%;
+			max-width: 264px;
+			display: block;
+			margin: 0 auto;
+		}
+		label {
+		    width: 100%;
+		    max-width: 320px;
+		    margin: 0 auto;
+		    display: block;
+		    margin-bottom: 3%;
+		    margin-top: 3%;
+		    background-color: none;
+		    border-radius: 3px;
+		    border: 3px solid $white;
+		    position: relative;
+		    overflow: hidden;
+		    @include transition(all .1s ease-in-out);
+		    &:hover {
+    			background: $white;
+    			color: $steelBlue;
+    			cursor: pointer;
+    		}//hover
+		    span {
+		    	text-align: center;
+			    font-size: 1.1em;
+			    font-weight: $bold;
+			    padding: 15px 0;
+			    display: block;
+		    }//span
+		    input {
+		    	position: absolute;
+    			top: -20px;
+    			&:checked + span{
+    				background-color: $white;
+    				color:$steelBlue;
+    			}//checked + span
+		    }//input
+		    .white {
+		    	border: 3px solid $white;
+		    	color: $white;
+		    }//white
+		}//label
+		.next-previous {
+			padding-top: 25px;
+			width: 100%;
+			text-align: center;
+			button {
+				border: none;
+				border: 3px solid $white;
+				width: 100%;
+				max-width: 120px;
+				background: none;
+				padding: 10px;
+				font-size: 1em;
+				text-transform: uppercase;
+				color: $white;
+				font-weight: $bold;
+				&:hover {
+					background: $white;
+					color: $steelBlue;
+					cursor: pointer;
+				}//next-previous.button:hover
+			}//next-previous.button
+		}//next-previous
+		.continueBtn {
+			font-weight: $bold;
+			margin-top: 3%;
+			border: none;
+			border: 3px solid $white;
+			background: none;
+			display: block;
+			margin: 0 auto;
+			font-size: 1em;
+			text-align: center;
+			padding: 10px;
+			text-transform: uppercase;
+			color: $white;
+			@include transition(all .1s ease-in-out);
+			&:hover {
+				color: $steelBlue;
+				background: $white;
+				cursor: pointer;
+			}//continueBtn:hover
+		} //continueBtn
+		.finishBtn {
+			background: none;
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			border: none;
+			padding: 10px;
+			margin-bottom: 3%;
+			@include transition(all .1s ease-in-out);
+			a {
+				font-size: 1em;
+				font-weight: $bold;
+				text-align: center;
+				padding: 10px;
+				color: $white;
+				text-decoration: none;
+				text-transform: uppercase;
+				border: 3px solid $white;
+				&:hover {
+					background: $white;
+					color: $steelBlue;
+				} //finishBtn.a:hover
+			} //finishBtn.a	
+		} //finishBtn
+	}//QnA
+}//container

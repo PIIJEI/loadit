@@ -23,7 +23,7 @@ if (env==='development') {
   sassStyle = 'expanded';
 } else {
   outputDir = 'builds/production/';
-  sassStyle = 'compressed';
+  sassStyle = 'expanded';
 } 
 
 jsSources = ['components/scripts/script.js'];

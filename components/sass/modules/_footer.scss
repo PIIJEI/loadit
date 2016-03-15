@@ -1,0 +1,17 @@
+footer {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	.credits {
+		display: block;
+		text-align: center;
+		padding: 10px;
+		p {
+			margin: 0;
+			font-size: .8em;
+			line-height: .8em;
+		}//credit.p
+	}//credits
+} //footer

@@ -1,11 +1,11 @@
 body {
-	font: $mainFont;
+	font-family: $mainFont;
 	background: $steelBlue;
 	color: $lightGray;
 }
 
 #{headings()} {
-	font: $mainFont;
+	font-family: $mainFont;
 	color: $lightGray;
 	font-weight: $bold;
 }

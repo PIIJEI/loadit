@@ -1,1 +1,417 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600|Martel+Sans:700);html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{font:"Open Sans",Arial,Helvetica,sans-serif;background:#4b77be;color:#e6e6e6}h1,h2,h3,h4,h5,h6{font:"Open Sans",Arial,Helvetica,sans-serif;color:#e6e6e6;font-weight:600}strong{font-weight:600}p{font-weight:400;padding-bottom:10px}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+******************
+* Main styling variables *
+* All variable used in the website *
+* Such as colours, fonts, font styles etc. *
+******************
+**/
+/* ----------------
+   COLOUR PALETTE
+-------------------*/
+/* ---------------
+  FONT VARIABLES
+------------------*/
+/* ---------------
+   BREAKPOINTS
+------------------*/
+/**
+******************
+* Mixin Styles *
+* Styling shortcuts *
+******************
+**/
+/* CLEARFIX */
+/* BORDERBOX */
+/* BREAPOINTS - SMALL, MEDIUM, LARGE, WIDE */
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  background: #4b77be;
+  color: #e6e6e6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #e6e6e6;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+body .popup-active {
+  overflow: hidden;
+}
+
+.logotype {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  display: table;
+  height: 100%;
+}
+.container .introPar {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  width: 100%;
+  max-width: 540px;
+  line-height: 1.2em;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+.container .btnsMenu {
+  margin-top: 5%;
+  padding: 0;
+  text-align: center;
+}
+.container .btnsMenu .menuTitle {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.container .btnsMenu ul {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+.container .btnsMenu ul li {
+  padding: 10px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.container .btnsMenu ul li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.1em;
+  border: 3px solid #ffffff;
+  padding: 15px;
+  border-radius: 25px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.container .btnsMenu ul li a:hover {
+  background: #ffffff;
+  color: #4b77be;
+}
+.container .popupBox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.container .popupBox .popOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 230, 230, 0.7);
+  z-index: 2;
+}
+.container .popupBox .popWrapper {
+  position: relative;
+  top: 50%;
+  max-width: 500px;
+  max-height: 100%;
+  margin: auto;
+  z-index: 3;
+  transform: translateY(-50%);
+}
+.container .popupBox .popContent {
+  height: 100%;
+  width: 100%;
+  max-width: 540px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 3px solid #d9d9d9;
+  padding: 10px;
+}
+.container .popupBox .popContent h1, .container .popupBox .popContent h2 {
+  text-align: center;
+  color: #1c1c1c;
+  padding: 5px;
+}
+.container .popupBox .popContent h1 {
+  font-size: 3em;
+}
+.container .popupBox .popContent h2 {
+  font-size: 1.4em;
+  margin-bottom: 5%;
+}
+.container .popupBox .popContent p {
+  color: #1c1c1c;
+  letter-spacing: 0.05em;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+.container .popupBox .popContent button {
+  background: none;
+  display: block;
+  margin: auto;
+  color: #1c1c1c;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #1c1c1c;
+  border-radius: 2px;
+  outline: none;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.container .popupBox .popContent button:hover {
+  cursor: pointer;
+  background: #363636;
+  color: #ffffff;
+}
+.container .QnA {
+  margin: 0;
+  padding: 10px;
+}
+.container .QnA label {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  background-color: none;
+  border-radius: 3px;
+  border: 3px solid #ffffff;
+  overflow: auto;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.container .QnA label:hover {
+  background: #ffffff;
+  color: #4b77be;
+  cursor: pointer;
+}
+.container .QnA label span {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 15px 0;
+  display: block;
+}
+.container .QnA label input {
+  position: absolute;
+  top: -20px;
+}
+.container .QnA label input:checked + span {
+  background-color: #ffffff;
+  color: #4b77be;
+}
+.container .QnA label .white {
+  border: 3px solid #ffffff;
+  color: #ffffff;
+}
+.container .QnA .next-previous {
+  padding-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+.container .QnA .next-previous button {
+  border: none;
+  border: 3px solid #ffffff;
+  width: 100%;
+  max-width: 120px;
+  background: none;
+  padding: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+}
+.container .QnA .next-previous button:hover {
+  background: #ffffff;
+  color: #4b77be;
+  cursor: pointer;
+}
+.container .bToMenu {
+  border-top: 2px dotted #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 25px;
+  text-align: center;
+}
+.container .bToMenu button {
+  border: none;
+  background: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ffffff;
+}
+.container .bToMenu button:hover {
+  color: #F5D76E;
+  cursor: pointer;
+}
+
+header {
+  height: 18vh;
+}
+header .site-nav {
+  margin: 0;
+  padding: 0;
+}
+header .site-nav:before, header .site-nav:after {
+  content: '';
+  display: table;
+}
+header .site-nav:after {
+  clear: both;
+}
+header .site-nav .brand {
+  float: left;
+  padding: 10px 0;
+}
+header .site-nav .brand a {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Martel Sans", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+header .site-nav .brand a:hover {
+  color: #F5D76E;
+}
+header .site-nav .menu {
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+  float: right;
+}
+header .site-nav .menu li {
+  display: inline;
+  float: left;
+}
+header .site-nav .menu li a {
+  padding: 10px 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: .9em;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+header .site-nav .menu li a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+footer .credits {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+footer .credits p {
+  margin: 0;
+  font-size: .8em;
+  line-height: .8em;
+}
+footer .credits p a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+footer .credits p a:hover {
+  border-bottom: 2px solid #ffffff;
+}

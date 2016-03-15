@@ -1,0 +1,47 @@
+header {
+	height: 18vh;
+
+	.site-nav { //nav
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+		
+		.brand {
+			float: left;
+			padding: 10px 0;
+			a {
+				text-align: center;
+				font-size: 1.2em;
+				padding: 0 10px;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: $logoFont;
+				color: $white;
+				&:hover {
+					color: $creamCan;
+				}//brand.a:hover
+			}//brand.a
+		}//brand
+
+		.menu { //ul
+			margin: 0;
+			padding: 10px;
+			list-style-type: none;
+			float: right;
+			li {
+				display: inline;
+				float: left;
+				a {
+					padding: 10px 5px;
+					text-decoration: none;
+					color: $white;
+					font-size: .9em;
+					font-family: $mainFont;
+					&:hover {
+						border-bottom: 2px solid $white;
+					}//menu.li.a:hover
+				}//menu.li.a
+			}//menu.li
+		}//menu
+	}//site-nav
+}//header
